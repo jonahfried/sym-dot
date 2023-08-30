@@ -1,0 +1,11 @@
+[user]
+	email = jfried@zushealth.com
+	name = Jonah Fried
+[alias]
+	glog = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all
+  olog = log --oneline
+  st = status
+  cm = commit -m 
+  co = checkout
+[url "git@github.com:"]
+	insteadOf = https://github.com/
