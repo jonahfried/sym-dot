@@ -94,6 +94,5 @@ db.setup({
 			},
 		},
 		footer = {}, --your footer
-		footer = {}, --your footer
 	},
 })

@@ -17,6 +17,8 @@ local plugins = {
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{ "rose-pine/neovim", name = "rose-pine" },
 	"sainnhe/everforest",
+	"folke/tokyonight.nvim",
+	"jsit/disco.vim",
 
 	"nvim-tree/nvim-tree.lua",
 	"nvim-tree/nvim-web-devicons",
@@ -49,7 +51,7 @@ local plugins = {
 
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
+		tag = "0.1.3",
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 	},
 

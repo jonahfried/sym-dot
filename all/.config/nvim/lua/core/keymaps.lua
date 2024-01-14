@@ -8,3 +8,7 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("n", "<leader>s", ":set spell!<CR>")
 
 vim.keymap.set("n", ",", "@q")
+
+
+
+vim.keymap.set("i", "kj", "<esc>")
