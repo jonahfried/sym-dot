@@ -11,17 +11,19 @@ COLORSCHEME_MAP = {
 	Tokyo_Night = "tokyonight",
 }
 
-vim.api.nvim_create_autocmd({ "Signal" }, {
-	callback = function()
-		local f = io.open("theme.conf", "r")
-		io.input(f)
-		local setTheme = io.read()
-		print("theme " .. setTheme)
-		local vimTheme = COLORSCHEME_MAP[setTheme]
+SET_THEME_FROM_CONFIG = function()
+	local f = io.open("theme.conf", "r")
+	io.input(f)
+	local setTheme = io.read()
+	local vimTheme = COLORSCHEME_MAP[setTheme]
 
-		local ok, _ = pcall(vim.cmd, "colorscheme " .. vimTheme)
-		if not ok then
-			vim.cmd("colorscheme disco")
-		end
-	end,
+	local ok, _ = pcall(vim.cmd, "colorscheme " .. vimTheme)
+	if not ok then
+		vim.cmd("colorscheme disco")
+	end
+end
+SET_THEME_FROM_CONFIG()
+
+vim.api.nvim_create_autocmd({ "Signal" }, {
+	callback = SET_THEME_FROM_CONFIG,
 })
